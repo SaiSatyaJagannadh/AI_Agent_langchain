@@ -3,3 +3,8 @@ langchain
 langchain-google-genai
 python-dotenv
 requests
+langgraph
+psycopg
+psycopg-binary
+langgraph-checkpoint-postgres
+langgraph-checkpoint-sqlite
