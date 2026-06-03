@@ -35,10 +35,21 @@ agent = create_agent(
     system_prompt=system_prompt, checkpointer=InMemorySaver()
 )
 
-user_query = input("Enter your query: ")
+while True:#continouschat by user
+    user_query1 = input("Enter your query: ")
+    if user_query1 in ['break','exit','close']:
+                       break
+    # response1 = llm.invoke("How is the weather in Rome?")
+    response1 = agent.invoke(
+        {"messages": [{'role': 'user',
+                    'content':user_query1}]},{'configurable':{'thread_id':1}})
+    print(response1['messages'][-1].content)
 
-# response1 = llm.invoke("How is the weather in Rome?")
-response1 = agent.invoke(
-    {"messages": [{'role': 'user',
-                   'content':user_query}]},{})
-print(response1['messages'][-1].content)
+
+# user_query2 = input("Enter your query: ")
+
+# # response1 = llm.invoke("How is the weather in Rome?")
+# response2 = agent.invoke(
+#     {"messages": [{'role': 'user',
+#                    'content':user_query2}]},{'configurable':{'thread_id':1}})
+# print(response2['messages'][-1].content)
