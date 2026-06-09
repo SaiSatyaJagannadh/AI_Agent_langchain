@@ -60,7 +60,7 @@ Otherwise, only mention the temperature in Celsius.
 
 """
 
-connection = SqliteSaver.from_conn_string('checkpoints.db')
+connection = SqliteSaver.from_conn_string('checkpoints.db') #stores the connection open 
 checkpointer = connection.__enter__()
 
 agent = create_agent(

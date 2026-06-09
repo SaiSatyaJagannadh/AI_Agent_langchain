@@ -29,6 +29,8 @@ def send():
     session['messages'].append({'type': 'ai', 'content': response['messages'][-1].content})
     session.modified = True
     print(session)
+    print('Thanks')
     return redirect(url_for('home'))
+    
 
 app.run(debug=True)
