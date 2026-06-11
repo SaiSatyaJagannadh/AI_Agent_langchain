@@ -30,7 +30,7 @@ def send():
     session.modified = True
     print(session)
     print('Thanks')
-    return redirect(url_for('home'))
+    return redirect(url_for('home'))#this will make it to stay on the same page 
     
 
 app.run(debug=True)
