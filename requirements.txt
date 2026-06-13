@@ -9,3 +9,4 @@ psycopg-binary
 langgraph-checkpoint-postgres
 langgraph-checkpoint-sqlite
 Flask
+langchain-ollama
